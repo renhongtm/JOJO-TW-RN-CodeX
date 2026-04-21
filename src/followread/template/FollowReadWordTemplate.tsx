@@ -135,7 +135,10 @@ export function FollowReadWordTemplate({
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <ScrollView contentContainerStyle={styles.container}>
+      <ScrollView
+        contentContainerStyle={styles.container}
+        keyboardShouldPersistTaps="handled"
+        removeClippedSubviews={false}>
         <View style={styles.hero}>
           <Text style={styles.eyebrow}>React Native Template Host</Text>
           <Text style={styles.heroTitle}>{config.meta.stepName ?? '跟读挑战'}</Text>
